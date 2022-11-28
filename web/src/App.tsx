@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import * as Dialog from "@radix-ui/react-dialog";
 
 import { CreateAdBanner } from "./components/CreateAdBanner";
@@ -7,6 +7,7 @@ import { CreateAdModal } from "./components/CreateAdModal";
 import { GameBanner } from "./components/GameBanner";
 
 import logoImg from "./assets/logo-nlw-esports.svg";
+import { data } from "./mock";
 
 import "./styles/main.css";
 
@@ -23,10 +24,10 @@ function App() {
   const [games, setGames] = useState<IGame[]>([]);
 
   useEffect(() => {
-    axios("http://localhost:3333/games")
-      .then((response) => {
-        setGames(response.data);
-      });
+    // axios("http://localhost:3333/games").then((response) => {
+    //   setGames(response.data);
+    // });
+    setGames(data);
   }, []);
 
   return (

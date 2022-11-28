@@ -7,6 +7,7 @@ import * as Checkbox from "@radix-ui/react-checkbox";
 import * as ToggleGroup from "@radix-ui/react-toggle-group";
 
 import { Input } from "./Input";
+import { data } from "../mock";
 
 interface IGame {
   id: string;
@@ -19,9 +20,10 @@ export function CreateAdModal() {
   const [useVoiceChannel, setUseVoiceChannel] = useState(false);
 
   useEffect(() => {
-    axios("http://localhost:3333/games").then((response) => {
-      setGames(response.data);
-    });
+    // axios("http://localhost:3333/games").then((response) => {
+    //   setGames(response.data);
+    // });
+    setGames(data);
   }, []);
 
   async function handleCreateAd(event: FormEvent) {
