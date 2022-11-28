@@ -3,7 +3,7 @@ import axios from "axios";
 import { Check, GameController } from "phosphor-react";
 
 import * as Dialog from "@radix-ui/react-dialog";
-import * as Checkbox from "@radix-ui/react-Checkbox";
+import * as Checkbox from "@radix-ui/react-checkbox";
 import * as ToggleGroup from "@radix-ui/react-toggle-group";
 
 import { Input } from "./Input";
